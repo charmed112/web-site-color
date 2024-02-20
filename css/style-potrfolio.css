@@ -1,0 +1,1689 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  
+  }
+  @font-face {
+    font-family: "PTSans-Regular";
+    src: url('/font/PTSans-Regular.ttf');
+    }
+  @font-face {
+    font-family: "PTSans-Italic";
+    src: url('/font/PTSans-Italic.ttf');
+    }
+  @font-face {
+      font-family: "PTSans-BoldItalic";
+      src: url('/font/PTSans-BoldItalic.ttf');
+      }
+  @font-face {
+        font-family: "Comfortaa";
+        src: url('/font/Comfortaa.ttf');
+        }
+  @font-face {
+  font-family: "Lobster-Regular";
+  src: url('/font/Lobster-Regular.ttf');
+  }
+  @font-face {
+    font-family: "Lovelace-Text-Extralight-trial";
+    src: url('/font/Lovelace/Lovelace-Text-Extralight-trial.ttf');
+    }
+  @font-face {
+      font-family: "Lovelace-Text-Light-trial";
+      src: url('/font/Lovelace/Lovelace-Text-Light-trial.ttf');
+      }
+    
+  .center {
+    padding-left: calc(50% - 700px);
+    padding-right: calc(50% - 700px);
+  }
+  .logo_photo{
+    width: 80px;
+    margin-left: 20px;
+  
+  }
+  .sect_nav{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    /* padding-top: 10px; */
+    background-color:#F3F1F1;
+  }
+  .nav{
+    padding-top: 40px;
+    margin-right: 50px;
+  }
+  .nav_pad{
+    background-color: #D9D9D9;
+    padding: 5px 15px 5px 15px;
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color:#000;
+    font-family: Lovelace-Text-Light-trial;
+    
+  }
+
+  .nav {
+    margin-right: 2rem;
+  }
+  
+  .nav:last-of-type {
+    margin-right: 0px;
+  }
+  
+  .nav_pad {
+    position: relative;
+    color: #2f3030;
+    font-size: 1.25rem;
+  }
+  
+  .nav_pad:hover {
+    color: rgb(0, 0, 0);
+  }
+  
+  .nav_pad:hover:before {
+    -webkit-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: left;
+    -ms-transform-origin: left;
+    transform-origin: left;
+    -webkit-transition: -webkit-transform 0.25s;
+    transition: -webkit-transform 0.25s;
+    -o-transition: transform 0.25s;
+    transition: transform 0.25s;
+    transition: transform 0.25s, -webkit-transform 0.25s;
+  }
+  
+  .nav_pad:before {
+    content: '';
+    width: 82%;
+    height: 1px;
+    background-color: rgb(160, 154, 154);
+    position: absolute;
+    left: 12px; bottom: 3px;
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: right;
+    -ms-transform-origin: right;
+    transform-origin: right;
+    -webkit-transition: -webkit-transform 0.25s;
+    transition: -webkit-transform 0.25s;
+    -o-transition: transform 0.25s;
+    transition: transform 0.25s;
+    transition: transform 0.25s, -webkit-transform 0.25s;
+  }
+  /* ______________________________слайдер */
+  body{
+    background-color:#fff;
+  }
+  .content {
+    margin-top: 150px;
+    font-size: 32px;
+    color: #27231f;
+    text-align: center;
+    width: 88%;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 61px;
+  
+    
+  }
+  .slider {
+    margin-top: 150px;
+    position: center;
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+  
+  }
+  .slider-title {
+    font-size: 32px;
+    color: #27231f;
+    text-align: center;
+  }
+  
+  .wrap {
+    width: 100%;
+    position: relative;
+  }
+  .slider-item {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+  }
+  .imgsize{
+    width: 100%;
+  }
+  
+  .prev {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    width: 90px;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-transition: 0.3s;
+            transition: 0.3s;
+    height: 98.4%;
+  }
+  .prev:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .arrow-left {
+    width: 30px;
+    height: 30px;
+    background: url(../icons/left-arrow.svg) center no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+    opacity: .4;
+    -webkit-transition: 1s;
+            transition: 1s;
+  }
+  .next {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    width: 90px;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-transition: 0.3s;
+            transition: 0.3s;
+    height: 98.4%;
+    right: 0%;
+  }
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .arrow-right {
+    opacity: 1;
+  }
+  .arrow-right {
+    width: 30px;
+    height: 30px;
+    background: url(../icons/right-arrow.svg) center no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+    opacity: .4;
+    -webkit-transition: 1s;
+            transition: 1s;
+  }
+  .slider-dots {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 10px;
+    background-color: #58575c;
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-transition: background-color 0.6s ease;
+            transition: background-color 0.6s ease;
+  }
+  .dot-active {
+    background-color: #000;
+    height: 15px;
+    width: 15px;
+  }
+  /* <!-- wedding-shooting ________________________--> */
+.shooting-block{
+  width: 86.45833333%;
+  background-color: #F3F1F1;
+  margin-left: 6.472222222%;
+  padding-bottom: 50px;
+  border-radius: 15px;
+  }
+  
+
+.photo-potrfolio{
+  width: 22.36111111%;
+  /* height: 400px; */
+  border-radius: 5px;
+
+}
+.photo-potrfolio span{
+  display: flex;
+  overflow: hidden;
+  }
+  .photo-potrfolio {
+  vertical-align: middle;
+  transition: all 0.3s ease;
+  }
+  .photo-potrfolio:hover {
+  transform: scale(1.1);
+  }
+
+.shooting-photo{
+  display: flex;
+  gap:5.473025801%;
+  justify-content: center;
+  margin-bottom: 57px;
+}
+.photo-title-name{
+  color: #000;
+  font-family: Lovelace-Text-Extralight-trial;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  /* margin-top: 54px; */
+  padding-top: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  text-shadow: 0 1px 0 #ccc,
+                0 2px 0 #c9c9c9,
+                0 3px 0 #bbb,
+                0 4px 0 #b9b9b9,
+                0 5px 0 #aaa,
+                0 6px 1px rgba(0,0,0,.1),
+                0 0 5px rgba(0,0,0,.1),
+                0 1px 3px rgba(0,0,0,.3),
+                0 3px 5px rgba(0,0,0,.2),
+                0 5px 10px rgba(0,0,0,.25),
+                0 10px 10px rgba(0,0,0,.2),
+                0 20px 20px rgba(0,0,0,.15);
+                  
+
+  
+}
+.wedding-shooting{
+  margin-bottom: 80px;
+}
+.Family-shooting{
+  margin-bottom: 80px;
+}
+.Portrait-shooting{
+  margin-bottom: 80px;
+}
+.Individual-shooting{
+  margin-bottom: 80px;
+}
+.but-fix{
+  margin-left: 83.70836591%;
+  margin-top: -20px;
+}
+.portfolio-bottom{
+
+  padding: 8px 23px 8px 23px;
+  border-radius: 20px;
+ 
+}
+/* __________________    */
+
+
+.portfolio-bottom{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  /* padding: 1em 2em; */
+  /* margin-top: 100px; */
+  /* margin-bottom: 60px; */
+  -webkit-appearance: none;
+  appearance: none;
+  background-color:#6661633d;
+  color: #242323;;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(134, 123, 131, 0.548);
+  
+  &:focus {
+    outline: 0;
+  }
+  
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  &:before{
+    display: none;
+    top: -75%;
+    background-image:  
+      radial-gradient(circle, #eeebec 20%, transparent 20%),
+    radial-gradient(circle,  transparent 20%, #eeebec 20%, transparent 30%),
+    radial-gradient(circle, #eeebec 20%, transparent 20%), 
+    radial-gradient(circle, #eeebec 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #eeebec 15%, transparent 20%),
+    radial-gradient(circle, #eeebec 20%, transparent 20%),
+    radial-gradient(circle, #eeebec 20%, transparent 20%),
+    radial-gradient(circle, #eeebec 20%, transparent 20%),
+    radial-gradient(circle, #eeebec 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+  }
+  
+  &:after{
+    display: none;
+    bottom: -75%;
+    background-image:  
+    radial-gradient(circle, #eeebec 20%, transparent 20%), 
+    radial-gradient(circle, #eeebec 20%, transparent 20%),
+    radial-gradient(circle,  transparent 10%, #eeebec 15%, transparent 20%),
+    radial-gradient(circle, #eeebec 20%, transparent 20%),
+    radial-gradient(circle, #eeebec 20%, transparent 20%),
+    radial-gradient(circle, #eeebec 20%, transparent 20%),
+    radial-gradient(circle, #eeebec 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+ 
+  &:active{
+    transform: scale(0.9);
+    background-color: darken(#eeebec, 5%);
+    box-shadow: 0 2px 25px rgba(180, 171, 176, 0.2);
+  }
+  
+  &.animate{
+    &:before{
+      display: block;
+      animation: topBubbles ease-in-out 0.75s forwards;
+    }
+    &:after{
+      display: block;
+      animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+  }
+}
+
+
+@keyframes topBubbles {
+  0%{
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+    50% {
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;}
+ 100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+  background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+}
+
+@keyframes bottomBubbles {
+  0%{
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;}
+ 100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+  background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+}
+a{
+  color: #000;
+}
+/* <!-- _________________________Family-shooting --> */
+.Family-shooting{
+  margin-bottom: 80px;
+  position: relative;
+}
+/* <!-- _________________________Portrait shoothing--> */
+.Portrait-shooting{
+  margin-bottom: 80px;
+  position: relative;
+}
+/* <!-- _________________________Portrait shoothing--> */
+.Individual-shooting{
+  margin-bottom: 80px;
+  position: relative;
+}
+
+
+
+/* <!-- buttom_orders_________________ --> */
+/* _____ ligth  but*/
+.more{
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  }
+  .more:hover {
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+  color: #474545;
+  z-index: 8;
+}
+  .more:before {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 100%;
+  width: 3em;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -4.5em;
+  -webkit-transform: skewX(-45deg) translateX(0);
+  transform: skewX(-45deg) translateX(0);
+  -webkit-transition: none;
+  transition: none;
+}    
+  .more:hover:before {
+  -webkit-transform: skewX(-45deg) translateX(13.5em);
+  transform: skewX(-45deg) translateX(22.5em);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.s ease-in-out;
+}
+
+/* ____but */
+.sale-text{
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000;
+  font-family: PTSans-BoldItalic;
+  font-size: 40px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: bold;
+ }
+ span{
+   font-size: 60px;
+   font-family: PTSans-Regular;
+   color: #ffffff;
+ }
+ .liner-numbers{
+   position: relative;
+   display: flex;
+   justify-content: center;
+ }
+ .days-text{
+   position: absolute;
+   left:50%;
+   margin-left:-145px;
+   font-family: PTSans-Regular;
+ }
+ .hours-text{
+   position: absolute;
+   left:50%;
+   margin-left:-61px;
+   font-family: PTSans-Regular;
+ }
+ .minutes-text{
+   position: absolute;
+   font-family: PTSans-Regular;
+   left:50%;
+   margin-left:19px;
+ }
+ .seconds-text{
+   position: absolute;
+   font-family: PTSans-Regular;
+   left:50%;
+   margin-left:105px;
+   
+ }
+ .services_received-motivation-backgraund-2{
+   height: 166px;
+   background-color:#F3F1F1 ;
+   text-align: center;
+   margin-bottom: 50px;
+ }
+ .days{
+   background-color:rgb(54, 52, 52) ;
+   width: 68px;
+   text-align: center;
+ }
+ .hours{
+   background-color:rgb(54, 52, 52) ;
+   width: 68px;
+   text-align: center;
+ }
+ .minutes{
+   background-color:rgb(54, 52, 52) ;
+   width: 68px;
+   text-align: center;
+ }
+ .seconds{
+   background-color:rgb(54, 52, 52) ;
+   width: 68px;
+   text-align: center;
+ }
+ .colon{
+   color:rgb(54, 52, 52) ;
+   margin-left: 2px;
+   margin-right: 6px;
+ }
+ .name-taimer{
+   margin-bottom: 50px;
+ }
+ .order-clients{
+   color: #000;
+   font-family: PTSans-Regular;
+   font-size: 36px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   text-align: center;
+ }
+ .orders-butt{
+   display: flex;
+   flex-direction: row;
+   margin-left: 350px;
+   gap:50px;
+   
+ }
+ .sale-numbers-img{
+   margin-top: -40px;
+   width: 300px;
+ }
+ 
+ .but-order{
+   display: block;
+   width: 200px;
+   height: 60px;
+   font-family: PTSans-Regular;
+   font-size: 16px;
+   margin-bottom: 30px;
+   border-radius: 20px;
+ }
+ .services_received-motivation{
+   color: #000;
+   font-family: Inter;
+   font-size: 32px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   padding: 60px;
+ }
+ .order-block-but{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: -150px; */
+ }
+ 
+ /* ____________________ footer*/
+ 
+ .block-footer{
+   height: 170px;
+   background-color:#F3F1F1 ;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   gap:100px
+ }
+ .my-social-network{
+   color: #2e2c2c;
+   font-family: Lobster-Regular;
+   font-size: 25px;
+   margin-top: 30px;
+   margin-bottom: 10px;
+ }
+ .social_network-icon{
+   margin-right: 20px;
+   align-items: center;
+   width: 30px;
+   height: 33px;
+ }
+ .social_network-icon1{
+   width: 30px;
+   height: 33px;
+   margin-left: 50px;
+   margin-right: 30px;
+ }
+ .feedback-but{
+   width: 37px;
+   margin-left: 77px;
+ 
+ }
+ .feedback-clients-text{
+   color: #2e2c2c;
+   font-family: Lobster-Regular;
+   font-size: 25px;
+   margin-bottom: 5px;
+   /* margin-left: 17px; */
+ }
+ .footer-img{
+   margin-top: 30px;
+   margin-left: 200px;
+   margin-right: 200px;
+   
+ }
+ .block-feedback{
+   margin-top: 30px;
+ }
+ .footer-nav{
+   display: flex;
+   flex-direction: column;
+ }
+ .nav_pad2{
+  margin-bottom: 7px;
+  color: #000;
+  margin-left: 10px;
+  font-family: Lovelace-Text-Light-trial;
+}
+
+.footer-nav{
+	margin-right: 2rem;
+}
+
+.nav:last-of-type {
+	margin-right: 0px;
+}
+
+.nav_pad2 {
+	position: relative;
+  color: #2f3030;
+  font-size: 1.25rem;
+}
+
+.nav_pad2:hover {
+	color: rgb(0, 0, 0);
+}
+
+.nav_pad2:hover:before {
+	-webkit-transform: scaleX(1);
+	-ms-transform: scaleX(1);
+	transform: scaleX(1);
+	-webkit-transform-origin: left;
+	-ms-transform-origin: left;
+	transform-origin: left;
+	-webkit-transition: -webkit-transform 0.25s;
+	transition: -webkit-transform 0.25s;
+	-o-transition: transform 0.25s;
+	transition: transform 0.25s;
+	transition: transform 0.25s, -webkit-transform 0.25s;
+}
+
+.nav_pad2:before {
+	content: '';
+	width: 82%;
+	height: 1px;
+	background-color: rgb(160, 154, 154);
+	position: absolute;
+	left: 0px; bottom: 3px;
+	-webkit-transform: scaleX(0);
+	-ms-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transform-origin: right;
+	-ms-transform-origin: right;
+	transform-origin: right;
+	-webkit-transition: -webkit-transform 0.25s;
+	transition: -webkit-transform 0.25s;
+	-o-transition: transform 0.25s;
+	transition: transform 0.25s;
+	transition: transform 0.25s, -webkit-transform 0.25s;
+}
+
+
+
+
+@media (min-width: 899px) and (max-width: 1250px) {
+
+  .center {
+    padding-left: calc(50% - 429px);
+    padding-right: calc(50% - 429px);
+  }
+  .content_about_photogarph-img{
+    width: 376px;
+    height: 477px;
+    margin-top: 0px;
+  }
+  .content_subtitle{
+    font-size: 20px;
+   
+  }
+  .content_title{
+    margin-block-start: 0em;
+    width: 85%;
+  }
+  .slider-item {
+    width: 100%;
+  }
+  /* ______________________________слайдер */
+  
+  .prev {
+    height: 97%;
+    width: 70px;
+  }
+  .next {
+    height: 97%;
+    width: 70px;
+   
+  }
+  /* wedding-shooting */
+  .but-fix{
+    margin-left: 80%;
+    margin-top: -20px;
+  }
+
+
+
+  /* <!-- buttom_orders_________________ --> */
+  
+  
+  .order-clients{
+    font-size: 26px;
+  }
+  .orders-butt{
+    margin-left: 250px; 
+  }
+  
+  /* <!-- _______________________services_received --> */
+  
+  .advantages-img{
+    margin-top: 50px;
+  }
+  .advantages-box{
+    gap: 60px;
+  }
+  .advantages-subtitle{
+    font-size: 32px;
+    padding-top: 55px;
+   
+  }
+  .advantages-subtitle2{
+    font-size: 32px;
+    padding-top: 25px;
+  }
+  .advantages-subtitle3{
+    font-size: 30px;
+    padding-top: 25px;
+    
+  }
+  .advantages-text{
+    width: 350px;
+  }
+  .advantages-of-ordering{
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .advantages-box {
+    margin-bottom: 39px;
+  }
+  .advantages-imgbox{
+    width: 350px;
+  }
+  /* <!-- buttom_orders_________________ --> */
+  .sale-numbers-img{
+    width:150px;
+  }
+  .orders-butt {
+    margin-left: 180px;
+  }
+  /* ____________________ footer*/
+  
+  .block-footer{
+    height: 170px;
+    gap:10px
+  }
+  .social_network-icon{
+    margin-right: 20px;
+    align-items: center;
+    width: 30px;
+    height: 33px;
+  
+  }
+  .content_about_photogarph-block{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
+  .footer-img{
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .content_title{
+   text-align: center;
+   margin-left: 40px;
+  }
+  .sale-numbers{
+    position: absolute;
+    width: 160px;
+    margin-left: 590px;
+    margin-top: -90px;
+  }
+  
+  }
+  
+  
+  
+  
+@media (min-width: 768px) and (max-width: 898px) {
+    .center {
+      padding-left: calc(50% - 364px);
+      padding-right: calc(50% - 364px);
+    }
+    .content_about_photogarph-img{
+      width: 376px;
+      height: 477px;
+      margin-top: 0px;
+    }
+    .content_subtitle{
+      font-size: 20px;
+     
+    }
+    .content_title{
+      margin-block-start: 0em;
+      width: 85%;
+    }
+    .slider-item {
+      width: 100%;
+    }
+   /* ______________________________слайдер */
+  
+  .prev {
+    height: 97%;
+    width: 70px;
+  }
+  .next {
+    height: 97%;
+    width: 70px;
+  }
+  /* wedding-shooting */
+.but-fix{
+    margin-left: 78%;
+    margin-top: -20px;
+}
+.photo-title-name{
+  font-size: 44px;
+}
+
+    /* <!-- buttom_orders_________________ --> */
+    .order-clients{
+      font-size: 26px;
+    
+    }
+  .orders-butt{
+      margin-left: 190px;
+  }
+   .order-clients{
+    margin-bottom: 20px;
+   }
+    
+  
+    /* <!-- _______________________services_received --> */
+    
+    .advantages-img{
+      margin-top: 50px;
+    }
+    .advantages-box{
+      gap: 60px;
+    }
+    .advantages-subtitle{
+      font-size: 32px;
+      padding-top: 55px;
+     
+    }
+    .advantages-subtitle2{
+      font-size: 32px;
+      padding-top: 25px;
+    }
+    .advantages-subtitle3{
+      font-size: 30px;
+      padding-top: 25px;
+      
+    }
+    .advantages-text{
+      width: 350px;
+    }
+    .advantages-of-ordering{
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+    .advantages-box {
+      margin-bottom: 39px;
+    }
+    .advantages-imgbox{
+      width: 350px;
+    }
+    /* <!-- buttom_orders_________________ --> */
+    .sale-numbers-img{
+      width:30%;
+    }
+    /* ____________________ footer*/
+    
+    .block-footer{
+      height: 170px;
+      gap:10px
+    }
+    .social_network-icon{
+      margin-right: 20px;
+      align-items: center;
+      width: 30px;
+      height: 33px;
+    
+    }
+    .content_about_photogarph-block{
+      display: block;
+      margin-left: auto;
+      margin-right: auto
+    }
+    .footer-img{
+      margin-top: 30px;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+    .content_title{
+     text-align: center;
+     margin-left: 40px;
+    }
+    .sale-numbers{
+      position: absolute;
+      width: 160px;
+      margin-left: 590px;
+      margin-top: -90px;
+    }
+    }
+  
+  
+  @media (min-width: 601px) and (max-width: 767px) {
+      
+  center {
+        padding-left: calc(50% - 140px);
+        padding-right: calc(50% - 140px);
+  }
+  .sect_nav{
+    position: relative;
+  }
+  .logo_photo{
+    position: absolute;
+    width: 150px;
+    margin-left: -180px;
+    top: 40px;
+  }
+  .sect_nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  
+  }
+  .nav{
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    margin-left: 210px;
+  }
+  .nav_pad{
+    background-color: #D9D9D9;
+    padding: 5px 15px 5px 15px;
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color:#000;
+    font-family: Lovelace-Text-Light-trial;
+    margin-bottom: 15px;
+  }
+  
+.content_subtitle{
+        font-size: 20px;
+       
+  }
+  .content_title{
+        margin-block-start: 0em;
+        width: 85%;
+  }
+      .slider-item {
+        width: 100%;
+  }
+  /* ______________________________слайдер */
+  
+  .prev {
+    height:96.5%;
+    width: 50px;
+  }
+  .next {
+    height: 96.5%;
+    width: 50px;
+   
+  }
+  
+/* wedding-shooting __________________*/
+.but-fix{
+  margin-left: 82%;
+  margin-top: -20px;
+}
+.photo-title-name{
+  font-size: 36px;
+}
+.portfolio-bottom{
+  font-size: 10px;
+  padding: 4px 10px 4px 10px;
+  border-radius: 20px;
+ 
+}
+.shooting-block{
+  padding-bottom: 30px;
+  }
+      
+  /* <!-- _______________________services_received --> */
+  
+  .services_received-motivation-backgraund{
+    margin-bottom: 0;
+  }
+  .services_received-motivation {
+    font-size: 24px;
+  }
+  .advantages-img{
+        margin-top: 50px;
+  }
+  .advantages-box{
+        gap: 60px;
+  }
+  .advantages-subtitle{
+        text-align: center;
+        align-items: center;
+  }
+  .box-text3 {
+   max-width: auto;
+   max-height: 376px;
+   text-align: center;
+  }
+  .advantages-subtitle2{
+        font-size: 32px;
+        padding-top: 25px;
+  }
+  .advantages-subtitle3{
+        font-size: 30px;
+        padding-top: 25px;
+        
+  }
+  .advantages-text{
+        width: 100%;
+  }
+  .advantages-of-ordering{
+        margin-left: 30px;
+        margin-right: 30px;
+  }
+  .advantages-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 69px;
+    align-items: center;
+  }
+  .sale-text {
+    font-size: 30px;
+  }
+  .sale-numbers-img {
+    width:80px;
+    height: 80px;
+    margin-top: 0px
+    
+  }
+  /* <!-- buttom_orders_________________ --> */
+  .orders-butt {
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .order-clients{
+    font-size: 26px;
+    align-items: center;
+    text-align: center;
+    margin-left: 70px;
+    width: 585px;
+  }
+  
+  /* ____________________ footer*/
+  .block-footer{
+    height: 390px;
+    background-color:#F3F1F1 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:10px
+  }
+  .my-social-network{
+    color: #2e2c2c;
+    font-family: Lobster-Regular;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .social_network-icon{
+    align-items: center;
+    width: 30px;
+    height: 33px;
+  }
+  .social_network-icon1{
+    width: 30px;
+    height: 33px;
+  }
+  .feedback-but{
+    width: 37px;
+    align-items: center;
+  }
+  .feedback-clients-text{
+    color: #2e2c2c;
+    font-family: Lobster-Regular;
+    font-size: 25px;
+    margin-bottom: 5px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+  
+  }
+  .footer-img{
+    display: block;
+    margin: 0 auto;
+  }
+  .block-feedback{
+   align-items: center;
+  }
+  .footer-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav_pad2{
+    margin-bottom: 7px;
+    color: #000;
+    margin-left: 10px;
+    font-family: Lovelace-Text-Light-trial;
+  }
+  .social-network{
+    display: block;
+    margin: 0 auto;
+  }
+  }
+  
+
+  @media (min-width: 440px) and (max-width: 600px) {
+      
+    center {
+          padding-left: calc(50% - 140px);
+          padding-right: calc(50% - 140px);
+    }
+    .sect_nav{
+      position: relative;
+    }
+    .logo_photo{
+      position: absolute;
+      width: 150px;
+      margin-left: -180px;
+      top: 40px;
+    }
+    .sect_nav{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    
+    }
+    .nav{
+      display: flex;
+      flex-direction: column;
+      padding-top: 40px;
+      margin-left: 210px;
+    }
+    .nav_pad{
+      background-color: #D9D9D9;
+      padding: 5px 15px 5px 15px;
+      border-radius: 15px;
+      margin-left: 5px;
+      margin-right: 5px;
+      color:#000;
+      font-family: Lovelace-Text-Light-trial;
+      margin-bottom: 15px;
+    }
+    
+  .content_subtitle{
+          font-size: 20px;
+         
+    }
+    .content_title{
+          margin-block-start: 0em;
+          width: 85%;
+    }
+        .slider-item {
+          width: 100%;
+    }
+    /* ______________________________слайдер */
+    
+    .prev {
+      height:96.5%;
+      width: 50px;
+    }
+    .next {
+      height: 96.5%;
+      width: 50px;
+     
+    }
+    
+  /* wedding-shooting __________________*/
+  .but-fix{
+    margin-left: 79%;
+    margin-top: -20px;
+  }
+  .photo-title-name{
+    font-size: 36px;
+  }
+  .portfolio-bottom{
+    font-size: 10px;
+    padding: 4px 10px 4px 10px;
+    border-radius: 20px;
+   
+  }
+  .shooting-block{
+    padding-bottom: 30px;
+    }
+        
+    /* <!-- _______________________services_received --> */
+    
+    .services_received-motivation-backgraund{
+      margin-bottom: 0;
+    }
+    .services_received-motivation {
+      font-size: 24px;
+    }
+    .advantages-img{
+          margin-top: 50px;
+    }
+    .advantages-box{
+          gap: 60px;
+    }
+    .advantages-subtitle{
+          text-align: center;
+          align-items: center;
+    }
+    .box-text3 {
+     max-width: auto;
+     max-height: 376px;
+     text-align: center;
+    }
+    .advantages-subtitle2{
+          font-size: 32px;
+          padding-top: 25px;
+    }
+    .advantages-subtitle3{
+          font-size: 30px;
+          padding-top: 25px;
+          
+    }
+    .advantages-text{
+          width: 100%;
+    }
+    .advantages-of-ordering{
+          margin-left: 30px;
+          margin-right: 30px;
+    }
+    .advantages-box{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      margin-bottom: 69px;
+      align-items: center;
+    }
+    .sale-text {
+      font-size: 30px;
+    }
+    .sale-numbers-img {
+      width:80px;
+      height: 80px;
+      margin-top: 0px
+      
+    }
+    /* <!-- buttom_orders_________________ --> */
+    .orders-butt {
+      margin-left: 0;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    
+    .order-clients{
+      font-size: 26px;
+      align-items: center;
+      text-align: center;
+      margin-left: 70px;
+      width: 585px;
+    }
+    
+    /* ____________________ footer*/
+    .block-footer{
+      height: 390px;
+      background-color:#F3F1F1 ;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap:10px
+    }
+    .my-social-network{
+      color: #2e2c2c;
+      font-family: Lobster-Regular;
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+    .social_network-icon{
+      align-items: center;
+      width: 30px;
+      height: 33px;
+    }
+    .social_network-icon1{
+      width: 30px;
+      height: 33px;
+    }
+    .feedback-but{
+      width: 37px;
+      align-items: center;
+    }
+    .feedback-clients-text{
+      color: #2e2c2c;
+      font-family: Lobster-Regular;
+      font-size: 25px;
+      margin-bottom: 5px;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 10px;
+    
+    }
+    .footer-img{
+      display: block;
+      margin: 0 auto;
+    }
+    .block-feedback{
+     align-items: center;
+    }
+    .footer-nav{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .nav_pad2{
+      margin-bottom: 7px;
+      color: #000;
+      margin-left: 10px;
+      font-family: Lovelace-Text-Light-trial;
+    }
+    .social-network{
+      display: block;
+      margin: 0 auto;
+    }
+    }
+
+
+
+@media (min-width: 320px) and (max-width: 439px) {
+
+center {
+  padding-left: calc(50% - 140px);
+  padding-right: calc(50% - 140px);
+}
+.sect_nav{
+      position: relative;
+}
+.logo_photo{
+      position: absolute;
+      width: 150px;
+      margin-left: -150px;
+      top: 40px;
+}
+.sect_nav{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    
+}
+.nav{
+      display: flex;
+      flex-direction: column;
+      padding-top: 40px;
+      margin-left: 140px;
+}
+.nav_pad{
+      background-color: #D9D9D9;
+      padding: 5px 15px 5px 15px;
+      border-radius: 15px;
+      margin-left: 5px;
+      margin-right: 5px;
+      color:#000;
+      font-family: Lovelace-Text-Light-trial;
+      margin-bottom: 15px;
+}
+    
+.content_subtitle{
+    font-size: 20px;
+}
+.content_title{
+    margin-block-start: 0em;
+    width: 85%;
+}
+.slider-item {
+    width: 100%;
+}
+
+/* ______________________________слайдер */
+  
+  .prev {
+    height:94.7%;
+    width: 40px;
+  }
+  .next {
+    height: 94.7%;
+    width: 40px;
+  }
+
+  /* wedding-shooting __________________*/
+  .but-fix{
+    margin-left: 71%;
+    margin-top: -20px;
+  }
+  .photo-title-name{
+    font-size: 36px;
+  }
+  .portfolio-bottom{
+    font-size: 10px;
+    padding: 4px 10px 4px 10px;
+    border-radius: 20px;
+  }
+  .shooting-block{
+    padding-bottom: 30px;
+    }
+/* <!-- _______________________services_received --> */
+  .services_received-motivation-backgraund-2 {
+      height: 250px;
+      background-color: #F3F1F1;
+      text-align: center;
+}
+.services_received-motivation-backgraund{
+      margin-bottom: 0;
+}
+.services_received-motivation {
+      font-size: 24px;
+}
+.advantages-img{
+    margin-top: 50px;
+}
+.advantages-box{
+  gap: 60px;
+}
+.advantages-subtitle{
+    text-align: center;
+    align-items: center;
+}
+.box-text3 {
+  max-width: auto;
+  max-height: 376px;
+  text-align: center;
+}
+.advantages-subtitle2{
+          font-size: 32px;
+          padding-top: 25px;
+}
+.advantages-subtitle3{
+    font-size: 30px;
+    padding-top: 25px;
+}
+.advantages-text{
+    width: 100%;
+}
+.advantages-of-ordering{
+     margin-left: 30px;
+     margin-right: 30px;
+}
+.advantages-box{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      margin-bottom: 69px;
+      align-items: center;
+}
+.sale-text {
+      font-size: 30px;
+}
+.sale-numbers-img {
+      width:80px;
+      height: 80px;
+      margin-top: 0px
+      
+}
+/* <!-- buttom_orders_________________ --> */
+.orders-butt {
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.order-clients{
+    font-size: 22px;
+    align-items: center;
+    text-align: center;
+}
+.days{
+      background-color:rgb(54, 52, 52) ;
+      width: 58px;
+      text-align: center;
+}
+.hours{
+      background-color:rgb(54, 52, 52) ;
+      width: 58px;
+      text-align: center;
+}
+.minutes{
+      background-color:rgb(54, 52, 52) ;
+      width: 58px;
+      text-align: center;
+}
+.seconds{
+      background-color:rgb(54, 52, 52) ;
+      width: 58px;
+      text-align: center;
+}
+    span{
+      font-size: 50px;
+    }
+    .days-text{
+      margin-left:-130px;
+    }
+    .hours-text{
+      margin-left:-56px;
+    }
+    .minutes-text{
+      margin-left:13px;
+    }
+    .seconds-text{
+      margin-left:88px;
+      
+    }
+/* ____________________ footer*/
+.block-footer{
+      height: 390px;
+      background-color:#F3F1F1 ;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap:10px
+    }
+.my-social-network{
+      color: #2e2c2c;
+      font-family: Lobster-Regular;
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+.social_network-icon{
+      align-items: center;
+      width: 30px;
+      height: 33px;
+}
+.social_network-icon1{
+      width: 30px;
+      height: 33px;
+}
+.feedback-but{
+      width: 37px;
+      align-items: center;
+}
+.feedback-clients-text{
+      color: #2e2c2c;
+      font-family: Lobster-Regular;
+      font-size: 25px;
+      margin-bottom: 5px;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 10px;
+}
+.footer-img{
+      display: block;
+      margin: 0 auto;
+}
+.block-feedback{
+     align-items: center;
+}
+.footer-nav{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+.nav_pad2{
+      margin-bottom: 7px;
+      color: #000;
+      margin-left: 10px;
+      font-family: Lovelace-Text-Light-trial;
+}
+.social-network{
+      display: block;
+      margin: 0 auto;
+}
+}
